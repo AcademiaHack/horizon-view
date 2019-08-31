@@ -1,8 +1,10 @@
 import React from 'react';
+import {Route} from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+import { Astro } from './pages/astro';
 
-function App() {
+function Home() {
   return (
     <div className="App">
       <header className="App-header">
@@ -21,6 +23,16 @@ function App() {
       </header>
     </div>
   );
+}
+
+
+function App() {
+  return (
+    <div>
+      <Route path='/' exact component={Home}/>
+      <Route path='/astro' component={Astro}/>
+    </div>
+  )
 }
 
 export default App;
