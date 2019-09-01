@@ -4,39 +4,37 @@ import { HorizontalAzimuth } from '../shared/horizontal_azimuth';
 //import M from "materialize-css"
 
 export const Astro = () =>{
-  //const [myPosition, setMyPosition] = useState(0)
+  //Se inicializa la variable fecha, y el objeto que pedire con los azimuth
   const [myDate, setMyDate] = useState("2014-05-05")
   const [myData, setMyData] = useState({})
-
-
 
  /* useEffect(() => {
     document.getElementById("myDate").value = "2014-05-05"
 
   })*/
-  
+  //CAmbia al dia anterior y traslada al sol a su nuevo grado, actualiza el objeto
   const PreviousDay = () => {
     document.getElementById("myDate").stepDown(1)
     setMyDate(document.getElementById("myDate").value)
     setMyData(HorizontalAzimuth(new Date(myDate), {latitude: 10.48801, longitude: -66.87919}, "sunset"))
     document.getElementsByClassName('my_sun')[0].style.transform = `translateX(${myData.horizontal_position*10}%)`
   }
+  //Cambia al siguiente dia y traslada al sol a su nuevo grado, actualiza el objeto
   const NextDay = () => {
     document.getElementById("myDate").stepUp(1)
     setMyDate(document.getElementById("myDate").value)
     setMyData(HorizontalAzimuth(new Date(myDate), {latitude: 10.48801, longitude: -66.87919}, "sunset"))
     document.getElementsByClassName('my_sun')[0].style.transform = `translateX(${myData.horizontal_position*10}%)`
   }
+  // Logica para aparecer y desaparecer la hora en la parte superior del sol
   const SunHour = () => {
-    
     if(document.getElementById("sunHour").checked == true) {
       document.getElementById("mysunHour").style.display="block"
     } else{
      document.getElementById("mysunHour").style.display="none"
   }}
-
+  // Logica para aparecer y desaparecer los grados azimuth en la superior del sol
   const SunAzimuth = () => {
-    
     if(document.getElementById("sunAzimuth").checked == true) {
       document.getElementById("mysunAzimuth").style.display="block"
     } else{
@@ -96,6 +94,9 @@ export const Astro = () =>{
   )
 }
 
+
+
+//IDEAS QUE NO SIRVIERON< PERO POR SI ACASO
 /*
         <input type="text" class="datepicker"
          value={myDate} onChange={
