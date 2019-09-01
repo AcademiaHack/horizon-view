@@ -1,21 +1,36 @@
 .myContainer {
     width: 1200px;
     margin: auto;
+    .headers_box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     .sun-container {
         width: 1200px;
-        height: 400px;
+        height: 200px;
         background-color: lightblue;
         display: flex;
         align-items: center;
-        padding: 0 50px 50px;
+        padding: 0 50px;
         .my_sun {
-            background-color: yellow;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            .sun_info {
+                display: flex;
+                justify-content: space-between;
+            }
+            .the_sun {
+                background-color: yellow;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+            }
         }
     }
     .date_wrapper {
+        margin: 10px;
+        padding: 10px;
         display: flex;
         background-color: darkblue;
         width: 320px;
@@ -32,8 +47,23 @@
             color: white;
         }
     }
+    .check_box_wrapper {
+        margin: 10px;
+        padding: 10px;
+        background-color: darkmagenta;
+        width: 320px;
+        height: 80px;
+        color: white;
+        .checkbox_letter {
+            color: white;
+        }
+    }
     .sun_info {
         display: flex;
         justify-content: space-between;
     }
+}
+
+.without_margin {
+    margin: 0;
 }
