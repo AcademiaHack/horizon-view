@@ -15,4 +15,25 @@
             border-radius: 50%;
         }
     }
+    .date_wrapper {
+        display: flex;
+        background-color: darkblue;
+        width: 320px;
+        height: 100px;
+        color: white;
+        flex-direction: column;
+        .date_wrapper_title {
+            width: 100%;
+        }
+        .my_date {
+            width: 140px;
+        }
+        input {
+            color: white;
+        }
+    }
+    .sun_info {
+        display: flex;
+        justify-content: space-between;
+    }
 }
