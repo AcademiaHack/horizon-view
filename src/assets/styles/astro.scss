@@ -54,16 +54,19 @@
         width: 320px;
         height: 80px;
         color: white;
-        .checkbox_letter {
-            color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .check_box_wrapper_width {
+            margin: 0;
+            width: 120px;
+            .checkbox_letter {
+                color: white;
+            }
         }
     }
     .sun_info {
         display: flex;
         justify-content: space-between;
     }
-}
-
-.without_margin {
-    margin: 0;
 }

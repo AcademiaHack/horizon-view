@@ -19,9 +19,8 @@ export const HorizontalAzimuth = (date, city, type) => {
         let minutes = my_state.getMinutes();
         if (minutes < 10) {
             minutes = "0" + minutes
-        } else {
-            minutes = minutes
         }
+
         let hours = my_state.getHours();
         if (hours > 12) {
             hours = hours - 12
